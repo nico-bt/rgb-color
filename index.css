@@ -41,8 +41,13 @@ h2 {
   width: 20%;
   padding-bottom: 20%;
   margin: 1.6%;
-  transition: background 0.5s;
+  transition: all 0.5s;
   border: 1px solid black;
+}
+
+.square:hover {
+  cursor: pointer;
+  transform: scale(110%);
 }
 
 .btn {
@@ -63,7 +68,8 @@ h2 {
 }
 .btn:hover {
   /*background: linear-gradient(90deg, #ec0623, #ff8717);*/
-  animation: pulse 0.3s;
+  /*animation: pulse 0.3s;*/
+  background: black;
   box-shadow: 0 0 0 0.25em darkred;
   font-size: 1.1rem;
   cursor: pointer;
