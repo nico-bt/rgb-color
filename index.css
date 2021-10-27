@@ -4,6 +4,74 @@ body {
   transition: background 1.5s;
 }
 
+/* ===================================================================== */
+/* Start game display  */
+/* ===================================================================== */
+.startGame {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* display: none; */
+  /* display: flex; is going to change dinamically with .show class */
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 35px;
+}
+.startGame > div {
+  max-width: 800px;
+  padding: 10px;
+}
+.startGame > h2 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.startGame > button {
+  font-size: 3rem;
+  margin-top: 8px;
+  padding: 8px;
+  width: 350px;
+  border-radius: 6px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.startGame > button:hover {
+  background-color: black;
+  color: white;
+}
+.rgb {
+  font-size: 2.5rem;
+}
+.red {
+  color: red;
+  font-weight: bold;
+}
+.green {
+  color: green;
+  font-weight: bold;
+}
+.blue {
+  color: blue;
+  font-weight: bold;
+}
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
+  height: 0;
+}
+
+/* ===================================================================== */
+/* General page style */
+/* ===================================================================== */
+
 h1,
 h2 {
   margin: 4px;
@@ -41,7 +109,7 @@ h2 {
   width: 20%;
   padding-bottom: 20%;
   margin: 1.6%;
-  transition: all 0.5s;
+  transition: background 0.5s;
   border: 1px solid black;
 }
 
@@ -58,7 +126,6 @@ h2 {
   color: white;
   letter-spacing: 0.1rem;
   text-align: center;
-  /*background: transparent;*/
   background: darkred;
   border: 1px solid red;
   padding: 0.25rem 0.5rem;
@@ -67,9 +134,7 @@ h2 {
   transition: all 0.2s linear;
 }
 .btn:hover {
-  /*background: linear-gradient(90deg, #ec0623, #ff8717);*/
-  /*animation: pulse 0.3s;*/
-  background: black;
+  animation: pulse 0.3s;
   box-shadow: 0 0 0 0.25em darkred;
   font-size: 1.1rem;
   cursor: pointer;

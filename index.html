@@ -5,12 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="index.css">
-  <title>RGB Color Game</title>
+  <title>Document</title>
 </head>
 
 <body>
+
+  <div class="startGame show">
+    <div>
+      <p>RGB stands for "Red Green Blue."</p>
+      <p>Combining red, green and blue light is the standard method of producing color images on screens, such as TVs, computer
+      monitors and smartphones.</p>
+      <p>
+        When displaying a color image on a screen, each pixel has a specific RGB value. In 24-bit color, this value is between 0
+        and 255, where 0 is no color and 255 is full saturation).
+      </p>
+      <p ><span class="rgb">RGB (</span>
+        <span class="red">Red amount: 0-255</span>,
+        <span class="green">Green amount:0-255</span>,
+        <span class="blue">Blue amount: 0-255</span>
+        <span class="rgb"> )</span>
+      </p>
+    </div>
+    <button id="playBtn">Play Game</button>
+  </div>
+
 <div class="nav">
-    <h2>Select Color:</h2> 
+    <h2>Guess the color:</h2> 
     <h1> <span id="randomColor"></span></h1>
     <div class="stripe">
       <span id="displayMsg"></span>

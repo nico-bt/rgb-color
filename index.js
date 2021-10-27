@@ -3,8 +3,20 @@ let alea = function() {
   return Math.floor((Math.random() * 255) + 1);
   }
 
-//Seleccionar squares
-squares = document.querySelectorAll(".square");
+//Seleccionar elementos
+/******************************************************************************/
+let squares = document.querySelectorAll(".square");
+let startGameBtn = document.querySelector("#playBtn")
+
+//Start game btn
+/******************************************************************************/
+startGameBtn.addEventListener("click", startGame)
+
+function startGame(){
+  document.querySelector(".startGame").classList.remove("show")
+  document.querySelector(".startGame").classList.add("hide")
+}
+
 
 //Funcion que resetea msg-fondo y asigna a todos los squares un color aleatorio
 /******************************************************************************/
