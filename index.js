@@ -8,6 +8,9 @@ let alea = function() {
 let squares = document.querySelectorAll(".square");
 let startGameBtn = document.querySelector("#playBtn")
 
+const audioWrong = document.querySelector("#wrong");
+const audioCorrect = document.querySelector("#correct");
+
 //Start game btn
 /******************************************************************************/
 startGameBtn.addEventListener("click", startGame)
@@ -43,6 +46,7 @@ const start = function() {
 function evaluar() {
   if (this.style.backgroundColor==colorToPick) {
     document.querySelector("#displayMsg").textContent="Correct! ";
+    audioCorrect.play();
     for (let i = 0; i < squares.length; i++) {
       squares[i].style.backgroundColor= "black";
       squares[i].removeEventListener("click",evaluar);
@@ -50,7 +54,10 @@ function evaluar() {
     this.style.backgroundColor=colorToPick;
     document.querySelector("body").style.backgroundColor=colorToPick;
   } else {
+    audioWrong.currentTime = 0; //rewind to make playing multiple clicks posible
+    audioWrong.play();
     this.style.backgroundColor="black";
+    this.removeEventListener("click", evaluar);
     document.querySelector("#displayMsg").textContent="Nope, Click another one ";
   }
 }
