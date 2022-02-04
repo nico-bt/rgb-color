@@ -8,6 +8,7 @@ let alea = function() {
 let squares = document.querySelectorAll(".square");
 let startGameBtn = document.querySelector("#playBtn")
 
+const audioNewColors = document.querySelector("#newColors");
 const audioWrong = document.querySelector("#wrong");
 const audioCorrect = document.querySelector("#correct");
 
@@ -26,7 +27,8 @@ function startGame(){
 let colorToPick=null;
 
 const start = function() {
-  
+  audioNewColors.currentTime=0; //rewind to make playing multiple clicks posible
+  audioNewColors.play();
   document.querySelector("#displayMsg").textContent="";
   document.querySelector("body").style.backgroundColor="black";
 
